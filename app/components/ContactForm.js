@@ -182,7 +182,7 @@ export function ContactForm() {
           $response = d.querySelector(".contact-form-response");
 
         $loader.classList.remove("none");
-        fetch("https://formsubmit.co/ajax/use.d.v.a.dev@gmail.com", {
+        fetch("ca10fad6a880b51a52533cf42f76a642", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

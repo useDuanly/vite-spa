@@ -10,7 +10,7 @@ export function PostCard(props) {
 
   return `
     <acticle class="post-card">
-     <img src="${urlPoster}" alt="${title.rendered}" />
+     <img src="${urlPoster}?nf_resize=smartcrop&w=250&h=25000" alt="${title.rendered}" />
      <h2>${title.rendered} </h2>
      <p>
       <time datetime="${date}">${dataFormat}</time>

@@ -7,9 +7,7 @@ import { ContactForm } from "./ContactForm.js";
 
 export async function Router() {
   const d = document,
-    w = window,
     $main = d.getElementById("main");
-  let apiURL, Component;
 
   let { hash } = location;
 
@@ -36,9 +34,8 @@ export async function Router() {
       document.querySelector(".loader").style.display = "none";
       return false;
     }
-    apiURL = `${api.SEARCH}/${query}`;
     await ajax({
-      url: apiURL,
+      url: `${api.SEARCH}/${query}`,
       cbSuccess: (search) => {
         //console.log(search);
         let html = "";
@@ -67,6 +64,7 @@ export async function Router() {
   } else {
     //console.log(`${api.POST}?slug=${hash.slice(2)}`);
     // `${api.POST}/${localStorage.getItem("wpPostId")}`
+
     await ajax({
       url: `${api.POST}?slug=${hash.slice(2)}`,
       cbSuccess: (link) => {

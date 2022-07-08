@@ -40,7 +40,7 @@ export async function infiniteScrollY() {
 
           // let cologo insertAdjacentHTML papra que iiserter despures de su otro contedindo
           document.getElementById("main").insertAdjacentHTML("beforeend", html);
-          console.log(html.length);
+          //console.log(html.length);
         },
       });
     }
