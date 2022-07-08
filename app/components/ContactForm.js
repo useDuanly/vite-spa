@@ -181,8 +181,9 @@ export function ContactForm() {
         const $loader = d.querySelector(".contact-form-loader"),
           $response = d.querySelector(".contact-form-response");
 
+        let custom = "duanly1985@gmail.com";
         $loader.classList.remove("none");
-        fetch("ca10fad6a880b51a52533cf42f76a642", {
+        fetch(`https://formsubmit.co/ajax/${custom}`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
